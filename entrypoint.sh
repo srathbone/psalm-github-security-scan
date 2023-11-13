@@ -12,7 +12,7 @@ if [ ! -z "$INPUT_WORKING_DIR" ]; then
 fi
 
 if test -f "composer.json"; then
-    COMPOSER_COMMAND="composer install --no-scripts --no-progress"
+    COMPOSER_COMMAND="composer install --no-scripts --no-progress --ignore-platform-req=ext-zip --ignore-platform-req=ext-exif"
     echo "::group::$COMPOSER_COMMAND"
     $COMPOSER_COMMAND
     echo "::endgroup::"
